@@ -3,7 +3,6 @@
     :default-active="defaultActive"
     mode="horizontal"
     :router="true"
-    @select="handleSelect"
     >
         <el-menu-item index="/">首页</el-menu-item>
         <el-menu-item index="/team">团队介绍</el-menu-item>

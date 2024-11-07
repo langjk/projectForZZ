@@ -17,10 +17,7 @@
 <script setup lang="ts">
 import Title from '../components/Title.vue'
 import Menu from '../components/Menu.vue'
-import { useRoute } from 'vue-router';
-import { computed } from 'vue';
 
-const route = useRoute();
 </script>
 
 <style scoped>
