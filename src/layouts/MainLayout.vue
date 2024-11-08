@@ -27,7 +27,7 @@ import Menu from '../components/Menu.vue'
 }
 .el-main{
     padding: 0;
-    background-color: rgb(250,250,254);
+    background-color: var(--background-color);
 }
 .el-container{
     height:100%;
@@ -36,5 +36,6 @@ import Menu from '../components/Menu.vue'
     height: 100%;
     display:flex;
     justify-content: center;
+    margin-top:50px;
 }
 </style>

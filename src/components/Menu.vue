@@ -2,6 +2,8 @@
     <el-menu
     :default-active="defaultActive"
     mode="horizontal"
+    :active-text-color="'#ffffff'"
+    :text-color="'#ffffff'"
     :router="true"
     > 
         <el-menu-item index="/">首页</el-menu-item>
@@ -20,15 +22,24 @@ const defaultActive = '/'
 <style scoped>
 .el-menu--horizontal{
     justify-content: center;
+    background-color: var(--menu-bg-color);
+    border: 0 0 1px 0 solid var(--border-color, #D4E1F5); /* 边框颜色 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
 }
 .el-menu-item{
     font-weight: bold;
     font-size:120%;
     width:180px;
+    color:var(--text-primary) !important;
 }
-
 
 .el-menu-item.is-active{
-    background-color:rgb(235.9, 245.3, 255);
+    background-color: var(--menu-selected-color) !important;
 }
+
+.el-menu-item:hover{
+    background-color: var(--menu-hover-color) !important;
+}
+
+
 </style>

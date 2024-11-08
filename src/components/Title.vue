@@ -20,7 +20,7 @@ const { circleUrl } = toRefs(state)
     height:100px;
     width:100%;
     align-items: center;
-    background-color: #409EFF;
+    background-color: var(--primary-color);
 }
 .avatar{
     margin:0 2%;
