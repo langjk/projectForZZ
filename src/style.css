@@ -11,22 +11,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background-color: #F0F4FA;
-  --primary-color: #005BB5;
+  --background-color: white;
+  --primary-color: rgb(10, 33, 63);
+  /*主题色*/
   --secondary-color: #007ACC;
   --button-hover-color: #3399FF;
   --border-color: #D4E1F5;
   --shadow-color: rgba(0, 102, 204, 0.1);
-  --text-primary: #333333; /* 主文字颜色 */
-  --text-secondary: #666666; /* 次要文字颜色 */
-  --text-white: #FFFFFF; /* 白色文字 */
+  --text-primary: rgb(7, 33, 64);
+  /* 主文字颜色 */
+  --text-secondary: #666666;
+  /* 次要文字颜色 */
+  --text-white: #FFFFFF;
+  /* 白色文字 */
+  --text-link: #3070B3;
   --link-color: #005BB5;
-  --menu-bg-color: #E6F2FF;
-  --menu-hover-color:  #a3cfff;
-  --menu-selected-color: #005BB5;
+  --menu-bg-color: rgb(10, 33, 63);
+  --menu-hover-color: rgb(10, 33, 63);
+  --menu-selected-color: rgb(10, 33, 63);
 
 }
-  
+
 body {
   margin: 0;
   display: flex;
@@ -35,13 +40,21 @@ body {
   min-height: 100vh;
 }
 
-html,body,#app{
+html,
+body,
+#app {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 #app {
-  width: 100%;
-  margin: 0 auto;
+  width: 100vw;
+  /* 宽度占满视口宽度 */
+  height: 100vh;
+  /* 高度占满视口高度 */
+  display: flex;
+  /* 如果需要内部布局，也可以使用 flex */
+  flex-direction: column;
+  /* 子元素竖直排列 */
 }

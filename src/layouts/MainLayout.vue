@@ -5,7 +5,7 @@
         </el-header>
         <el-main>
             <el-header>
-                <Menu />
+                <Intro />
             </el-header>
             <el-main class="main-container">
                 <slot />
@@ -16,26 +16,26 @@
 
 <script setup lang="ts">
 import Title from '../components/Title.vue'
-import Menu from '../components/Menu.vue'
-
+import Intro from '../components/Intro.vue'
 </script>
 
 <style scoped>
-.el-header{
+.el-header {
     padding: 0;
     height: auto;
 }
-.el-main{
+
+.el-main {
     padding: 0;
     background-color: var(--background-color);
 }
-.el-container{
-    height:100%;
-}
-.main-container{
+
+.el-container {
     height: 100%;
-    display:flex;
+}
+
+.main-container {
+    display: flex;
     justify-content: center;
-    margin-top:50px;
 }
 </style>
