@@ -13,7 +13,7 @@
                 <span>C</span>
             </div>
             <!-- 动态生成图片块 -->
-            <div v-for="(item, index) in items" :key="item.id" :class="['grid-item', item.large ? 'large' : '']"
+            <div v-for="(item) in items" :key="item.id" :class="['grid-item', item.large ? 'large' : '']"
                 :style="item.style">
                 <img :src="item.src" alt="图片" />
             </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 interface ImageItem {
     id: number;
     src: string; // 图片路径
