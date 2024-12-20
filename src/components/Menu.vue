@@ -1,6 +1,5 @@
 <template>
-    <el-menu 
-    :default-active="activeRoute" mode="horizontal" :active-text-color="'#ffffff'" :text-color="'#ffffff'"
+    <el-menu :default-active="activeRoute" mode="horizontal" :active-text-color="'#ffffff'" :text-color="'#ffffff'"
         :router="true" :ellipsis="false" class="menuContainer">
         <el-menu-item index="/">首页</el-menu-item>
         <el-menu-item index="/team">团队介绍</el-menu-item>

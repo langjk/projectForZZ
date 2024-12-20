@@ -8,7 +8,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Bundler", // 保持 Bundler 模式，用于 Vite
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -20,7 +20,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* 添加 Vite 支持 */
+    "types": ["vite/client"], // 添加 Vite 的类型支持
+    "baseUrl": ".", // 确保路径别名工作
+    "paths": {
+      "@/*": ["src/*"] // 配置路径别名
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/env.d.ts" // 确保全局类型声明文件被包含
+  ]
 }

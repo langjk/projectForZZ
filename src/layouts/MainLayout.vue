@@ -5,7 +5,12 @@
         </el-header>
         <el-main>
             <el-header>
-                <Intro />
+                <div v-if="activeRoute != '/'">
+                    <Intro />
+                </div>
+                <div v-else>
+                    <Pic />
+                </div>
             </el-header>
             <el-main class="main-container">
                 <slot />
@@ -15,8 +20,20 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import Title from '../components/Title.vue'
 import Intro from '../components/Intro.vue'
+import Pic from '../components/HomePagePic.vue'
+const route = useRoute();
+const activeRoute = ref(route.path);
+
+watch(
+    () => route.path,
+    (newPath) => {
+        activeRoute.value = newPath;
+    }
+);
 </script>
 
 <style scoped>
