@@ -41,9 +41,9 @@ const shuffledImages = imagePaths.sort(() => Math.random() - 0.5);
 const layout = [
     ...Array(6).fill("small"), // 前6个小
     "large",                  // 1个大
-    ...Array(15).fill("small"), // 中间15个小
+    ...Array(12).fill("small"), // 中间15个小
     "large",                   // 1个大
-    ...Array(9).fill("small"),  // 最后9个小
+    ...Array(7).fill("small"),  // 最后9个小
 ];
 
 // 创建随机分布的图片数据
@@ -60,8 +60,6 @@ const items = ref<ImageItem[]>(
         };
     })
 );
-
-console.log(items.value); // 检查生成的数据
 
 // const items = reactive([
 //     { content: "图片", style: "grid-column: span 1;" },
@@ -102,14 +100,14 @@ console.log(items.value); // 检查生成的数据
 .container {
     display: flex;
     justify-content: space-evenly;
-    padding: 5% 10% 0 10%;
+    padding: 0 10% 0 10%;
     background-color: var(--menu-bg-color);
 }
 
 .grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     /* 5列布局 */
     grid-auto-rows: 15%;
     /* 每行高度 */

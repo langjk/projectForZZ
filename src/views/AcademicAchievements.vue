@@ -41,7 +41,6 @@ import type { ResearchData } from '../types/researchType';
 import rawData from '../assets/research.json';
 
 const researchData = rawData as ResearchData;
-console.log(researchData)
 </script>
 
 <style scoped>

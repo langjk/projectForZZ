@@ -9,6 +9,7 @@
                     <Intro />
                 </div>
                 <div v-else>
+                    <Intro />
                     <Pic />
                 </div>
             </el-header>

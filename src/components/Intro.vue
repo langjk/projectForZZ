@@ -19,7 +19,7 @@ const route = useRoute();
 const title = computed(() => {
     switch (route.path) {
         case '/':
-            return '首页';
+            return '天津大学嵌入式计算与控制研究中心';
         case '/team':
             return '团队介绍';
         case '/research':
@@ -37,17 +37,17 @@ const title = computed(() => {
 const content = computed(() => {
     switch (route.path) {
         case '/':
-            return '介绍wpt、mpc、ecc当前的研究进展+团队合影/证件照';
+            return '聚焦复杂系统边缘侧分布式计算与控制研究领域，服务新型电力能源系统与特种装备智能感知等应用场景。通过开发轻量化智能算法与优化嵌入式并行计算架构，突破终端算力、存储及功耗等指标约束，为实现分布式群智能系统提供理论基础、算力平台及解决方案。';
         case '/team':
             return '教授、博后、当前学生、毕业学生（证件照、生活照/籍贯/邮箱/年级/方向/毕业去向？可以用员工表上的）';
         case '/research':
             return '对wpt、mpc、ecc平台、成果的详细介绍、参加的项目';
         case '/academic':
-            return '论文（能直接跳转到论文界面？）、专利、专著';
+            return '';
         case '/collaboration':
             return '参与项目、学术交流、企业合作';
         case '/activities':
-            return '课题组团建活动';
+            return '';
         default:
             return '首页';
     }
@@ -56,20 +56,20 @@ const content = computed(() => {
 <style scoped>
 .container {
     background-color: var(--menu-bg-color);
-    height: 300px;
     color: white;
-    padding: 60px 10%;
+    padding: 60px 10% 30px 10%;
 }
 
 .title {
-    font-size: 400%;
+    font-size:4vw;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .content {
-    font-size: 150%;
-    width: 40%;
+    font-size: max(1.5vw,14px);
+    line-height: max(3vw,28px);
+    width: 60%;
     min-width: 300px;
     overflow-wrap: break-word;
     overflow: hidden;
