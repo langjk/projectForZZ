@@ -100,7 +100,7 @@ const items = ref<ImageItem[]>(
 .container {
     display: flex;
     justify-content: space-evenly;
-    padding: 0 10% 0 10%;
+    padding: 3vw 10% 0 10%;
     background-color: var(--menu-bg-color);
 }
 
