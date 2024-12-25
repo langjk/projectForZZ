@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <div v-for="item in rawData" class="mainCard">
-            <el-row style="width:100%">
+            <el-row style="width:100%;align-items: center;">
                 <el-col :span="6">
-                    <img class="img" :src="'/projectForZZ/src/assets/MemberPic/' + item.name + '.jpg'" />
+                    <img :src="`${imagePath}/${item.name}.jpg`" alt="Member Image" />
                 </el-col>
                 <el-col :span="18">
                     <el-row class="card-header">
@@ -28,7 +28,8 @@
 </template>
 <script setup lang="ts">
 import rawData from '../assets/member.json';
-console.log(rawData)
+const imagePath = new URL('../assets/MemberPic/', import.meta.url).href;
+console.log(imagePath)
 </script>
 <style scoped>
 .container {
@@ -47,7 +48,7 @@ console.log(rawData)
 
 .title {
     font-size: 90%;
-    line-height:2vw;
+    line-height:max(2vw,20px);
 }
 
 .english_title {
@@ -57,8 +58,9 @@ console.log(rawData)
 }
 
 .mainCard {
-    font-size:1.3vw;
+    font-size:max(1.3vw,12px);
     width: 45%;
+    min-width:300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,6 +78,8 @@ console.log(rawData)
 img {
     height: 12vw;
     width: 9vw;
+    min-width:60px;
+    min-height:80px;
     object-fit: cover;
     border-radius: 5%;
 }

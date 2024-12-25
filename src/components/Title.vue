@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div style="display: flex;width:40%;align-items: center;">
-            <el-avatar class="avatar" :size="50" :src="circleUrl" />
+            <!-- <el-avatar class="avatar" :size="50" :src="circleUrl" /> -->
             <div class="nameContainer">
                 <div class="name">天津大学嵌入式计算与控制研究中心</div>
                 TJU Center For Embeded Computing And Control
