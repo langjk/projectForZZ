@@ -9,7 +9,7 @@
                     <Intro />
                 </div>
                 <div v-else>
-                    <Pic />
+                    <Video />
                 </div>
             </el-header>
             <el-main class="main-container">
@@ -20,11 +20,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
-import Title from '../components/Title.vue'
-import Intro from '../components/Intro.vue'
-import Pic from '../components/HomePagePic.vue'
+import { ref, watch } from "vue";
+import { useRoute } from "vue-router";
+import Title from "../components/Title.vue";
+import Intro from "../components/Intro.vue";
+import Video from "@/components/Video.vue";
 const route = useRoute();
 const activeRoute = ref(route.path);
 
