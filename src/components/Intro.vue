@@ -31,7 +31,7 @@ const title = computed(() => {
         case '/activities':
             return '团建活动';
         default:
-            return '首页';
+            return ' ';
     }
 });
 const content = computed(() => {
@@ -49,7 +49,7 @@ const content = computed(() => {
         case '/activities':
             return '';
         default:
-            return '首页';
+            return ' ';
     }
 });
 </script>
