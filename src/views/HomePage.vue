@@ -1,28 +1,66 @@
 <template>
-    <div class="container">
-        <div class="title">
-            天津大学嵌入式计算与控制研究中心
-        </div>
-        <div class="content">
-            聚焦复杂系统边缘侧分布式计算与控制研究领域，服务新型电力能源系统与特种装备智能感知等应用场景。通过开发轻量化智能算法与优化嵌入式并行计算架构，突破终端算力、存储及功耗等指标约束，为实现分布式群智能系统提供理论基础、算力平台及解决方案。
-        </div>
+    <div style="display: flex; flex-direction: column; width: 100%; align-items: center">
+        <el-row style="width: 80%; margin-top: 1.5vw">
+            <el-col :span="18">
+                <div class="title">新闻</div>
+                <!-- <div class="content">新闻内容</div> -->
+                <div class="News">
+                    <HomeNews v-for="i in 3" :Newsid="i" />
+                </div>
+            </el-col>
+            <el-col :span="6" class="sideBar">
+                <el-tabs v-model="activeName" :stretch="true">
+                    <el-tab-pane label="学术讲座" name="lecture">
+                        <HomeSideBar
+                            v-for="item in lectureData"
+                            :day="item.day"
+                            :date="item.date"
+                            :title="item.title"
+                            :description="item.description"
+                        ></HomeSideBar>
+                    </el-tab-pane>
+                    <el-tab-pane label="通知公告" name="notice">
+                        <HomeSideBar
+                            v-for="item in noticeData"
+                            :day="item.day"
+                            :date="item.date"
+                            :title="item.title"
+                            :description="item.description"
+                        ></HomeSideBar>
+                    </el-tab-pane>
+                </el-tabs>
+            </el-col>
+        </el-row>
     </div>
 </template>
 <script setup lang="ts">
+import { ref } from "vue";
+import HomeNews from "@/components/HomeNews.vue";
+import noticeData from "../assets/notice.json";
+import lectureData from "../assets/lecture.json";
+import HomeSideBar from "@/components/HomeSideBar.vue";
+const activeName = ref("lecture");
 </script>
 <style scoped>
-.container{
-    width:80%;
-    margin-top:1.5vw;
-}
-.title{
-    font-size:3vw;
+.title {
+    font-size: 2.6vw;
     font-weight: bold;
     margin-bottom: 1vw;
 }
-.content{
-    font-size:1.3vw;
-    width:50%;
-    height:500px;
+.content {
+    font-size: 1.3vw;
+    width: 50%;
+}
+.News {
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sideBar {
+    width: 25%;
+}
+:deep(.el-tabs__item) {
+    font-size: 1.3vw;
 }
 </style>

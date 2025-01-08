@@ -1,19 +1,22 @@
 <template>
     <div class="container">
-        <div style="display: flex;width:40%;align-items: center;">
-            <!-- <el-avatar class="avatar" :size="50" :src="circleUrl" /> -->
-            <div class="nameContainer">
-                <div class="name">天津大学嵌入式计算与控制研究中心</div>
-                TJU Center For Embeded Computing And Control
-            </div>
+        <!-- <el-avatar class="avatar" :size="50" :src="circleUrl" /> -->
+        <div class="nameContainer">
+            天津大学嵌入式计算与控制研究中心<br />
+            TJU Center For Embeded Computing And Control
         </div>
-        <div style="width:5%"></div>
-        <Menu></Menu>
+        <div style="width: 1%"></div>
+        <div class="large-screen" style="width: 60%; height: 100%">
+            <Menu></Menu>
+        </div>
+        <div class="small-screen" style="width: 100%; height: 100%">
+            <Menu></Menu>
+        </div>
     </div>
 </template>
 <script lang="ts" setup>
 // import { reactive, toRefs } from 'vue'
-import Menu from '../components/Menu.vue'
+import Menu from "../components/Menu.vue";
 // const state = reactive({
 //     circleUrl:
 //         'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png',
@@ -31,7 +34,6 @@ import Menu from '../components/Menu.vue'
     background-color: var(--primary-color);
     justify-content: space-between;
     overflow: hidden;
-
 }
 
 .avatar {
@@ -39,7 +41,6 @@ import Menu from '../components/Menu.vue'
 }
 
 .name {
-    font-size: 130%;
     line-height: 50px;
     font-weight: bold;
     color: white;
@@ -50,10 +51,29 @@ import Menu from '../components/Menu.vue'
     display: flex;
     text-wrap: nowrap;
     flex-direction: column;
-    font-size: 100%;
-    width: 70%;
     color: white;
     text-align: center;
-    margin: 10px 0;
+    margin-left: 4%;
+    height: 4vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    justify-content: space-evenly;
+}
+/* 隐藏 .large-screen 在小屏幕 */
+@media (max-width: 1000px) {
+    .large-screen {
+        display: none;
+    }
+    .nameContainer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* 隐藏 .small-screen 在大屏幕 */
+@media (min-width: 1001px) {
+    .small-screen {
+        display: none;
+    }
 }
 </style>
