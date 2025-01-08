@@ -41,7 +41,7 @@
 </template>
 <script setup lang="ts">
 import rawData from "../../assets/member.json";
-const imagePath = new URL("../../assets/MemberPic", import.meta.url).href;
+const imagePath = "/projectForZZ/MemberPic";
 </script>
 <style scoped>
 .container {
