@@ -3,7 +3,7 @@
         <el-header>
             <Title />
         </el-header>
-        <el-main>
+        <el-main class="pageContainer">
             <el-header>
                 <div v-if="activeRoute != '/'">
                     <Intro />
@@ -15,6 +15,9 @@
             <el-main class="main-container">
                 <slot />
             </el-main>
+            <el-footer>
+                <Footer />
+            </el-footer>
         </el-main>
     </el-container>
 </template>
@@ -25,6 +28,7 @@ import { useRoute } from "vue-router";
 import Title from "../components/Title.vue";
 import Intro from "../components/Intro.vue";
 import Video from "@/components/Video.vue";
+import Footer from "@/components/Footer.vue";
 const route = useRoute();
 const activeRoute = ref(route.path);
 
@@ -40,11 +44,26 @@ watch(
 .el-header {
     padding: 0;
     height: auto;
+    flex-shrink: 0;
+    min-height: auto;
+    overflow: visible;
 }
 
 .el-main {
     padding: 0;
     background-color: var(--background-color);
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-height: auto;
+    overflow: visible;
+}
+
+.el-footer {
+    padding: 0;
+    background-color: var(--menu-bg-color);
+    flex-shrink: 0;
+    min-height: auto;
+    overflow: visible; 
 }
 
 .el-container {
@@ -54,5 +73,11 @@ watch(
 .main-container {
     display: flex;
     justify-content: center;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column; /* 垂直布局 */
+    min-height: 100vh; /* 确保父容器最小高度为视口高度 */
 }
 </style>

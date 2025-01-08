@@ -22,7 +22,7 @@ props
 </script>
 <style scoped>
 .NewsContainer {
-    width: max(100px,20%);
+    width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;

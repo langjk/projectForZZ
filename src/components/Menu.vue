@@ -5,6 +5,7 @@
         :active-text-color="'#ffffff'"
         :text-color="'#ffffff'"
         :background-color="`var(--menu-bg-color)`"
+        :ellipsis="false"
         :router="true"
     >
         <el-menu-item index="/">首页</el-menu-item>
@@ -23,7 +24,6 @@
             <el-menu-item index="/news/center">新闻中心</el-menu-item>
             <el-menu-item index="/news/notices">通知公告</el-menu-item>
         </el-sub-menu>
-
         <el-sub-menu index="4">
             <template #title>研究方向</template>
             <el-menu-item index="/research/embedded-computing">嵌入式计算</el-menu-item>
@@ -37,7 +37,16 @@
                 >能源协同控制</el-menu-item
             >
         </el-sub-menu>
-        <el-menu-item index="/academic">学术成果</el-menu-item>
+        <el-sub-menu index="5">
+            <template #title>学术成果</template>
+            <el-menu-item index="/academic-results/latest-results">最新成果</el-menu-item>
+            <el-menu-item index="/academic-results/papers-patents"
+                >论文专利</el-menu-item
+            >
+            <el-menu-item index="/academic-results/monographs"
+                >专著</el-menu-item
+            >
+        </el-sub-menu>
         <el-menu-item index="/collaboration">人员招聘</el-menu-item>
         <el-menu-item index="/activities">团队活动</el-menu-item>
         <el-menu-item index="/contact">联系方式</el-menu-item>
@@ -61,6 +70,10 @@ watch(
 <style scoped>
 .el-menu--horizontal > .el-menu-item {
     float: right;
+    width: 12.5%;
+}
+.el-menu--horizontal > .el-sub-menu {
+    width: 12.5%;
 }
 .name {
     font-weight: bold;
@@ -85,6 +98,28 @@ watch(
     border-bottom: none !important;
     border: none;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1vw;
+    height: 4vw;
+}
+:deep(.el-sub-menu .el-sub-menu__icon-arrow) {
+    right: 10%;
+}
+@media (max-width: 1000px) {
+    :deep(.el-sub-menu__title) {
+        font-size: 2vw;
+    }
+    :deep(.el-menu-item) {
+        font-size: 2vw;
+        padding: 0;
+    }
+}
+@media (min-width: 1001px) {
+    :deep(.el-sub-menu__title) {
+        font-size: 1vw;
+    }
+    :deep(.el-menu-item) {
+        font-size: 1vw;
+        padding: 0 20px;
+    }
 }
 </style>

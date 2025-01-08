@@ -1,34 +1,49 @@
 <template>
-    <div style="display: flex;flex-direction:column;width:100%;align-items:center">
-
-        <div class="container">
-            <div class="title">
-                新闻
-            </div>
-            <div class="content">
-                新闻内容
-            </div>
-            <div class="News">
-                <HomeNews v-for="i in 4" :Newsid="i" />
-            </div>
-        </div>
-            <div class="End">
-                <div class="EndContent">
-                    联系方式
+    <div style="display: flex; flex-direction: column; width: 100%; align-items: center">
+        <el-row style="width: 80%; margin-top: 1.5vw">
+            <el-col :span="18">
+                <div class="title">新闻</div>
+                <!-- <div class="content">新闻内容</div> -->
+                <div class="News">
+                    <HomeNews v-for="i in 3" :Newsid="i" />
                 </div>
-            </div>
+            </el-col>
+            <el-col :span="6" class="sideBar">
+                <el-tabs v-model="activeName" :stretch="true">
+                    <el-tab-pane label="学术讲座" name="lecture">
+                        <HomeSideBar
+                            v-for="item in lectureData"
+                            :day="item.day"
+                            :date="item.date"
+                            :title="item.title"
+                            :description="item.description"
+                        ></HomeSideBar>
+                    </el-tab-pane>
+                    <el-tab-pane label="通知公告" name="notice">
+                        <HomeSideBar
+                            v-for="item in noticeData"
+                            :day="item.day"
+                            :date="item.date"
+                            :title="item.title"
+                            :description="item.description"
+                        ></HomeSideBar>
+                    </el-tab-pane>
+                </el-tabs>
+            </el-col>
+        </el-row>
     </div>
 </template>
 <script setup lang="ts">
-import HomeNews from '@/components/HomeNews.vue';
+import { ref } from "vue";
+import HomeNews from "@/components/HomeNews.vue";
+import noticeData from "../assets/notice.json";
+import lectureData from "../assets/lecture.json";
+import HomeSideBar from "@/components/HomeSideBar.vue";
+const activeName = ref("lecture");
 </script>
 <style scoped>
-.container{
-    width:80%;
-    margin-top:1.5vw;
-}
 .title {
-    font-size: 3vw;
+    font-size: 2.6vw;
     font-weight: bold;
     margin-bottom: 1vw;
 }
@@ -36,21 +51,16 @@ import HomeNews from '@/components/HomeNews.vue';
     font-size: 1.3vw;
     width: 50%;
 }
-.News{
-    margin-top:4%;
+.News {
+    margin-top: 4%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:  space-evenly;
+    justify-content: space-evenly;
 }
-.End{
-    margin-top:20%;
-    background-color: var(--menu-bg-color);
-    height:5vw;
-    width:100%;
-    color: white;
+.sideBar {
+    width: 25%;
 }
-.EndContent{
-    font-size:1.5vw;
-    margin:0 10%;
+:deep(.el-tabs__item) {
+    font-size: 1.3vw;
 }
 </style>
