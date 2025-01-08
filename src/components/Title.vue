@@ -53,21 +53,25 @@ import Menu from "../components/Menu.vue";
     flex-direction: column;
     color: white;
     text-align: center;
-    margin-left:4%;
+    margin-left: 4%;
+    height: 4vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    justify-content: space-evenly;
 }
 /* 隐藏 .large-screen 在小屏幕 */
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .large-screen {
         display: none;
     }
-    .nameContainer{
+    .nameContainer {
         width: 100%;
-        margin:none;
+        margin-left: 0;
     }
 }
 
 /* 隐藏 .small-screen 在大屏幕 */
-@media (min-width: 701px) {
+@media (min-width: 1001px) {
     .small-screen {
         display: none;
     }

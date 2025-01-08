@@ -3,7 +3,7 @@
         <div v-for="(Imgs, index) in ImageList" class="carouselContainer"
             :style="{ backgroundColor: index % 2 === 0 ? '#ffffff' : 'rgb(240,245,250)' }">
             <div style="display:flex;flex-direction:column">
-                <div style="width:100%">{{ activities[index].date }}</div>
+                <div style="width:100%">{{ activities[index].date }} {{'   '}} {{activities[index].category}}</div>
                 <!-- <el-image :src="Imgs[0]" loading="lazy" lazy :preview-src-list="Imgs" style="height:300px;width:400px;" :fit="'cover'"></el-image> -->
                 <el-carousel type="card" height="400px" :indicator-position="'none'" class="carousel">
                     <el-carousel-item v-for="item in Imgs" :key="item">

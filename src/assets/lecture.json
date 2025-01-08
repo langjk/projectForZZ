@@ -1,0 +1,42 @@
+[
+    {
+        "date": "9月13日",
+        "timestamp": 1726249200,
+        "day": "周五",
+        "title": "TTJU求是青年学者讲坛：华南师范大学的王达教授 “Nanocrystal...",
+        "description": "报告主要介绍了纳米晶体在光电功能材料中的应用与发展方向。",
+        "location": "线上直播"
+    },
+    {
+        "date": "9月6日",
+        "timestamp": 1725644400,
+        "day": "周五",
+        "title": "TTJU求是青年名师讲坛：Naresh Kumar教授 “Nanoscale Inves...",
+        "description": "探讨纳米级别光学材料与其在工业应用中的重要性。",
+        "location": "北洋园校区50楼A332"
+    },
+    {
+        "date": "5月4日",
+        "timestamp": 1715703600,
+        "day": "周二",
+        "title": "TTJU求是名师讲坛：华东理工大学马璐教授 “组装诱导有机室温...",
+        "description": "研究有机材料组装与其在室温催化中的前沿探索。",
+        "location": "线上直播"
+    },
+    {
+        "date": "4月3日",
+        "timestamp": 1713370800,
+        "day": "周二",
+        "title": "TTJU求是青年学者讲坛：Delft University of Technology Thom...",
+        "description": "分享荷兰代尔夫特理工大学关于绿色能源技术的最新研究。",
+        "location": "线上直播"
+    },
+    {
+        "date": "4月7日",
+        "timestamp": 1712938800,
+        "day": "周二",
+        "title": "TTJU求是名师讲坛：中国科学院大连化学物理研究所肖建平研究员...",
+        "description": "介绍最新化学物理领域的实验方法与未来发展方向。",
+        "location": "线上直播"
+    }
+]
