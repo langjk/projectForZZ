@@ -10,9 +10,6 @@
                 <span @click="jump('https://zdhmeeting.tju.edu.cn/')"
                     >学院会议室预订系统</span
                 >
-                <span @click="jump('https://mp.weixin.qq.com/s/KM9RTAvgCFsUfn2FphoRNA')"
-                    >院长信箱</span
-                >
             </div>
         </div>
         <div class="EndContent">

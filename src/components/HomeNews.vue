@@ -1,32 +1,44 @@
 <template>
-    <div class="NewsContainer">
-        <el-image>
-            <template #error>
-                <div class="image-slot">
-                    <el-icon><icon-picture /></el-icon>
-                </div>
-            </template>
-        </el-image>
-        <div class="NewsTitle">标题{{ Newsid }}</div>
-        <div class="NewsContent">内容{{ Newsid }}</div>
+    <div class="NewsContainer" @click="jump(url)">
+        <img :src="image" alt="新闻图片" class="news-image" />
+        <div class="NewsTitle">{{ title }}</div>
+        <div class="NewsContent">{{ content }}</div>
     </div>
 </template>
 <script setup lang="ts">
-import { Picture as IconPicture } from "@element-plus/icons-vue";
 interface Props {
-    Newsid: number;
+    title: string;
+    content: string;
+    image: string;
+    url: string;
 }
 
 const props = defineProps<Props>();
-props
+props;
+const jump = (url: string) => {
+    window.open(url, "_blank");
+};
 </script>
 <style scoped>
 .NewsContainer {
-    width: 30%;
+    width: 25%;
     height: auto;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    padding:2%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0.3vw 0.4vw rgba(0, 0, 0, 0.1);
 }
+.NewsContainer:hover {
+    transform: translateY(-5px); /* 向上移动5px */
+    box-shadow: 0 0.6vw 1vw rgba(0, 0, 0, 0.2); /* 加强阴影效果 */
+}
+.news-image {
+    height:9vw;
+    object-fit:cover;
+}
+
 .block {
     padding: 30px 0;
     text-align: center;
@@ -40,7 +52,7 @@ props
     max-width: 300px;
     max-height: 200px;
     width: 100%;
-    height:20vw;
+    height: 20vw;
 }
 
 .image-slot {
@@ -57,12 +69,12 @@ props
     font-size: 5vw;
 }
 .NewsTitle {
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: bold;
     margin: 5% 3%;
 }
 .NewsContent {
-    font-size: 1vw;
+    font-size: 0.8vw;
     margin: 0 3%;
 }
 </style>
