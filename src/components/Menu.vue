@@ -104,23 +104,36 @@ watch(
 }
 :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
     right: 10%;
+    font-size:1vw
 }
 @media (max-width: 1000px) {
     :deep(.el-sub-menu__title) {
         font-size: 2vw;
+        padding: 1vw !important;
     }
     :deep(.el-menu-item) {
         font-size: 2vw;
         padding: 0;
     }
+    :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
+        right: 10%;
+        font-size:2vw;
+        margin-top:-0.8vw;
+    }
 }
 @media (min-width: 1001px) {
     :deep(.el-sub-menu__title) {
         font-size: 1vw;
+        padding: 1vw !important;
     }
     :deep(.el-menu-item) {
         font-size: 1vw;
         padding: 0 20px;
+    }
+    :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
+        right: 10%;
+        font-size:1vw;
+        margin-top:-0.4vw;
     }
 }
 </style>
