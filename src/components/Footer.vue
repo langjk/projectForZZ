@@ -15,7 +15,7 @@
         <div class="EndContent">
             新媒体平台
             <div class="imgs">
-                <img style="height: 10vw; object-fit: contain" src="@/assets/code.png" />
+                <img style="height: 10vw; object-fit: contain" src="/code.png" />
             </div>
         </div>
         <div class="EndContent">

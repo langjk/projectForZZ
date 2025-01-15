@@ -49,21 +49,29 @@ const newsList = ref<
 
 // 加载所有新闻的 JSON 文件
 const loadNews = async () => {
-    // 使用 Vite 的 import.meta.glob 批量加载内容
-    const modules = import.meta.glob("./src/assets/news/*/content.json");
-    console.log(modules)
-    for (const path in modules) {
-        const module: any = await modules[path](); // 动态导入 JSON 内容
-        const basePath = import.meta.env.BASE_URL || "/";
-        const imagePath = path
-            .replace("content.json", "image.png")
-            .replace("./src", `${basePath}src`);
+    const basePath = import.meta.env.BASE_URL || "/";
+    const newsFolders = ["News1", "News2", "News3"]; // 根据实际目录列出文件夹名称
 
-        newsList.value.push({
-            ...module,
-            image: imagePath,
-        });
+    for (const folder of newsFolders) {
+        const contentPath = `${basePath}News/${folder}/content.json`;
+        const imagePath = `${basePath}News/${folder}/image.png`;
+
+        try {
+            // 加载 JSON 文件
+            const response = await fetch(contentPath);
+            const module = await response.json();
+
+            // 将 JSON 数据和图片路径加入列表
+            newsList.value.push({
+                ...module,
+                image: imagePath,
+            });
+        } catch (error) {
+            console.error(`Failed to load content from ${contentPath}:`, error);
+        }
     }
+
+    console.log(newsList.value); // 打印结果，确保加载成功
 };
 
 // 在组件挂载时加载新闻

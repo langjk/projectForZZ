@@ -56,7 +56,7 @@
     </div>
 </template>
 <script setup lang="ts">
-import imageUrl from "@/assets/scene.png";
+import imageUrl from "/scene.png";
 </script>
 <style scoped>
 .view {

@@ -17,7 +17,7 @@
 </template>
 <script lang="ts" setup>
 import Menu from "../components/Menu.vue";
-import imageUrl from "@/assets/logo.png";
+import imageUrl from "/logo.png";
 
 // const { circleUrl } = toRefs(state)
 </script>
