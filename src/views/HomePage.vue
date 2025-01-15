@@ -17,7 +17,15 @@
             <el-col :span="2"></el-col>
             <el-col :span="6" class="sideBar">
                 <div class="title">通知公告</div>
-                <div style="display: flex; justify-content: space-between;flex-direction:column;flex-grow:1;padding:2%">
+                <div
+                    style="
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        padding: 2%;
+                    "
+                >
                     <HomeSideBar
                         v-for="item in noticeData.slice(0, 4)"
                         :day="item.day"
@@ -35,24 +43,22 @@ import HomeNews from "@/components/HomeNews.vue";
 import noticeData from "../assets/notice.json";
 import HomeSideBar from "@/components/HomeSideBar.vue";
 import { ref, onMounted } from "vue";
-
 // 定义新闻列表
 const newsList = ref<
     { title: string; type: string; content: string; image: string; url: string }[]
 >([]);
 
-// 加载所有新闻的 JSON 文件
+// 加载所有新闻的 JSON 文件cx`
 const loadNews = async () => {
-    // 使用 Vite 的 import.meta.glob 批量加载内容
-    const modules = import.meta.glob("../assets/news/*/content.json");
-
-    
+    // 确保路径匹配正确
+    const modules = import.meta.glob("./src/assets/news/**/content.json");
+    console.log("Matched modules:", Object.keys(modules));
     for (const path in modules) {
-        var imagePath = new URL("../assets/news/*/content.json", import.meta.url).href;
         const module: any = await modules[path](); // 动态导入 JSON 内容
-        // const basePath = import.meta.env.BASE_URL || "/";
-        imagePath = path
+        const basePath = import.meta.env.BASE_URL || "/";
+        const imagePath = path
             .replace("content.json", "image.png")
+            .replace("src", `${basePath}src`); // 注意路径替换
 
         newsList.value.push({
             ...module,
@@ -83,7 +89,7 @@ onMounted(() => {
 }
 .sideBar {
     width: 25%;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 :deep(.el-tabs__item) {

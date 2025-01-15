@@ -50,15 +50,14 @@ const newsList = ref<
 // 加载所有新闻的 JSON 文件
 const loadNews = async () => {
     // 使用 Vite 的 import.meta.glob 批量加载内容
-    const modules = import.meta.glob("../assets/news/*/content.json");
-
-    
+    const modules = import.meta.glob("./src/assets/news/*/content.json");
+    console.log(modules)
     for (const path in modules) {
-        var imagePath = new URL("../assets/news/*/content.json", import.meta.url).href;
         const module: any = await modules[path](); // 动态导入 JSON 内容
-        // const basePath = import.meta.env.BASE_URL || "/";
-        imagePath = path
+        const basePath = import.meta.env.BASE_URL || "/";
+        const imagePath = path
             .replace("content.json", "image.png")
+            .replace("./src", `${basePath}src`);
 
         newsList.value.push({
             ...module,
@@ -100,7 +99,7 @@ const jump = (url: string) => {
     .news-item {
         display: flex;
         width: 46%;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
     }
     .news-image {
         width: 100%;
@@ -112,7 +111,7 @@ const jump = (url: string) => {
     }
     .news-page {
         font-size: 3vw;
-        display:flex;
+        display: flex;
         justify-content: space-between;
     }
 }
@@ -150,7 +149,7 @@ const jump = (url: string) => {
     color: #333;
 }
 
-p{
-    margin:0;
+p {
+    margin: 0;
 }
 </style>
