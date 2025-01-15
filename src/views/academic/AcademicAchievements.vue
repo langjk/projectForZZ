@@ -1,10 +1,10 @@
 <template>
     <div class="routerContainer">
         <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
-            <el-tab-pane label="最新成果" name="/academic-results/latest-results">
+            <el-tab-pane label="论文" name="/academic-results/latest-results">
                 <router-view
             /></el-tab-pane>
-            <el-tab-pane label="论文专利" name="/academic-results/papers-patents">
+            <el-tab-pane label="专利" name="/academic-results/papers-patents">
                 <router-view
             /></el-tab-pane>
             <el-tab-pane label="专著" name="/academic-results/monographs">

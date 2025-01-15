@@ -5,12 +5,20 @@
             <div style="display:flex;flex-direction:column">
                 <div style="width:100%">{{ activities[index].date }} {{'   '}} {{activities[index].category}}</div>
                 <!-- <el-image :src="Imgs[0]" loading="lazy" lazy :preview-src-list="Imgs" style="height:300px;width:400px;" :fit="'cover'"></el-image> -->
-                <el-carousel type="card" height="400px" :indicator-position="'none'" class="carousel">
-                    <el-carousel-item v-for="item in Imgs" :key="item">
-                        <el-image loading="lazy" lazy :fit="'cover'" :src="item"
-                            style="height:100%;width:100%;object-fit: cover;" />
-                    </el-carousel-item>
-                </el-carousel>
+                <el-row>
+                    <el-col :span="14">
+                        <el-carousel type="card" height="max(20vw,100px)" :indicator-position="'none'" class="carousel">
+                            <el-carousel-item v-for="item in Imgs" :key="item">
+                                <el-image loading="lazy" lazy :fit="'cover'" :src="item"
+                                    style="height:100%;width:100%;object-fit: cover;" />
+                            </el-carousel-item>
+                        </el-carousel>
+                    </el-col>
+                    <el-col :span="2" />
+                    <el-col :span="8" class="description">
+                        {{activities[index].description}}
+                    </el-col>
+                </el-row>
             </div>
         </div>
     </div>
@@ -21,6 +29,7 @@ interface Activity {
     date: string;
     category: string;
     route: string;
+    description: string;
 }
 
 const activities = ref<Activity[]>([]); // 显式指定类型
@@ -46,8 +55,6 @@ onMounted(async () => {
             .map(([, module]) => (module as { default: string }).default);
         ImageList.value.push(images);
     }
-
-    console.log(ImageList.value);
 });
 
 </script>
@@ -63,5 +70,12 @@ onMounted(async () => {
     font-size: 3vw;
     font-weight: bold;
     padding: 2% 5%;
+}
+
+.description{
+    font-weight:400;
+    font-size:50%;
+    line-height:200%;
+    align-items:center;
 }
 </style>

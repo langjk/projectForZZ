@@ -1,7 +1,8 @@
 <template>
     <div class="container">
-        <!-- <el-avatar class="avatar" :size="50" :src="circleUrl" /> -->
         <div class="nameContainer">
+            <el-image class="avatar" :fit="'fill'" :src="imageUrl" />
+
             天津大学嵌入式计算与控制研究中心<br />
             TJU Center For Embeded Computing And Control
         </div>
@@ -15,12 +16,8 @@
     </div>
 </template>
 <script lang="ts" setup>
-// import { reactive, toRefs } from 'vue'
 import Menu from "../components/Menu.vue";
-// const state = reactive({
-//     circleUrl:
-//         'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png',
-// })
+import imageUrl from "@/assets/logo.png";
 
 // const { circleUrl } = toRefs(state)
 </script>
@@ -37,7 +34,8 @@ import Menu from "../components/Menu.vue";
 }
 
 .avatar {
-    margin: 0 2%;
+    height: 3vw;
+    margin-right: 2%;
 }
 
 .name {
@@ -50,14 +48,14 @@ import Menu from "../components/Menu.vue";
 .nameContainer {
     display: flex;
     text-wrap: nowrap;
-    flex-direction: column;
     color: white;
     text-align: center;
-    margin-left: 4%;
+    margin-left: 2%;
     height: 4vw;
     font-size: 1vw;
     line-height: 1.5vw;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 /* 隐藏 .large-screen 在小屏幕 */
 @media (max-width: 1000px) {

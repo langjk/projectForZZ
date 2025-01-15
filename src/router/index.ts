@@ -10,8 +10,6 @@ import ContactInformation from '../views/ContactInformation.vue'
 import CenterIntroduction from '../views/center/CenterIntroduction.vue';
 import TeacherTeam from '../views/center/TeacherTeam.vue';
 import GraduateStudents from '../views/center/GraduateStudents.vue';
-import FullTimeResearch from '../views/center/FullTimeResearch.vue';
-import JointTraining from '../views/center/JointTraining.vue';
 import Alumni from '../views/center/Alumni.vue';
 
 import NewsCenter from '../views/NewsCenter.vue';
@@ -26,6 +24,7 @@ import LatestResults from '@/views/academic/LatestResults.vue'
 import Monographs from '@/views/academic/Monographs.vue'
 import PapersPatents from '@/views/academic/PapersPatents.vue'
 
+import NewViewer from '@/components/NewViewer.vue'
 const routes = [
     { path: '/', component: HomePage },
 
@@ -36,8 +35,6 @@ const routes = [
             { path: 'introduction', name: 'CenterIntroduction', component: CenterIntroduction },
             { path: 'teachers', name: 'TeacherTeam', component: TeacherTeam },
             { path: 'graduates', name: 'GraduateStudents', component: GraduateStudents },
-            { path: 'full-time-research', name: 'FullTimeResearch', component: FullTimeResearch },
-            { path: 'joint-training', name: 'JointTraining', component: JointTraining },
             { path: 'alumni', name: 'Alumni', component: Alumni }
         ]
     },
@@ -46,7 +43,8 @@ const routes = [
         name: 'News',
         children: [
             { path: 'center', name: 'NewsCenter', component: NewsCenter },
-            { path: 'notices', name: 'Notices', component: Notices }
+            { path: 'notices', name: 'Notices', component: Notices },
+            { path: 'newsviewer', name: 'NewsViewer', component: NewViewer }
         ]
     },
     {

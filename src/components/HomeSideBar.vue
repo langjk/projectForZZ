@@ -28,7 +28,6 @@ const props = defineProps<Props>();
 <style scoped>
 .SContainer {
     display: flex;
-    margin:0 0 30px 0;
     font-size: 1vw;font-family: "楷体";
 }
 .week {

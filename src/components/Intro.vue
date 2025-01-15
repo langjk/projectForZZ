@@ -76,7 +76,7 @@ const content = computed(() => {
 .container {
     background-color: var(--menu-bg-color);
     color: white;
-    padding: 60px 10% 30px 10%;
+    padding: 2vw 10% 1vw 10%;
 }
 
 .title {

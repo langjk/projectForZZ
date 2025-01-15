@@ -14,16 +14,17 @@
             <el-menu-item index="/center/introduction">研究中心简介</el-menu-item>
             <el-menu-item index="/center/teachers">教师团队</el-menu-item>
             <el-menu-item index="/center/graduates">研究生</el-menu-item>
-            <el-menu-item index="/center/full-time-research">专职研发</el-menu-item>
-            <el-menu-item index="/center/joint-training">联合培养</el-menu-item>
             <el-menu-item index="/center/alumni">毕业生</el-menu-item>
         </el-sub-menu>
 
-        <el-sub-menu index="3">
+        <el-menu-item index="/news/center">
             <template #title>新闻通知</template>
-            <el-menu-item index="/news/center">新闻中心</el-menu-item>
+        </el-menu-item>
+        <!-- <el-sub-menu index="3">
+            <template #title>新闻通知</template>
+            <el-menu-item index="/news/center">组内新闻</el-menu-item>
             <el-menu-item index="/news/notices">通知公告</el-menu-item>
-        </el-sub-menu>
+        </el-sub-menu> -->
         <el-sub-menu index="4">
             <template #title>研究方向</template>
             <el-menu-item index="/research/embedded-computing">嵌入式计算</el-menu-item>
@@ -39,9 +40,9 @@
         </el-sub-menu>
         <el-sub-menu index="5">
             <template #title>学术成果</template>
-            <el-menu-item index="/academic-results/latest-results">最新成果</el-menu-item>
+            <el-menu-item index="/academic-results/latest-results">论文</el-menu-item>
             <el-menu-item index="/academic-results/papers-patents"
-                >论文专利</el-menu-item
+                >专利</el-menu-item
             >
             <el-menu-item index="/academic-results/monographs"
                 >专著</el-menu-item
@@ -103,23 +104,36 @@ watch(
 }
 :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
     right: 10%;
+    font-size:1vw
 }
 @media (max-width: 1000px) {
     :deep(.el-sub-menu__title) {
         font-size: 2vw;
+        padding: 1vw !important;
     }
     :deep(.el-menu-item) {
         font-size: 2vw;
         padding: 0;
     }
+    :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
+        right: 10%;
+        font-size:2vw;
+        margin-top:-0.8vw;
+    }
 }
 @media (min-width: 1001px) {
     :deep(.el-sub-menu__title) {
         font-size: 1vw;
+        padding: 1vw !important;
     }
     :deep(.el-menu-item) {
         font-size: 1vw;
         padding: 0 20px;
+    }
+    :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
+        right: 10%;
+        font-size:1vw;
+        margin-top:-0.4vw;
     }
 }
 </style>
