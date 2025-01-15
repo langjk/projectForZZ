@@ -44,14 +44,15 @@ const newsList = ref<
 // 加载所有新闻的 JSON 文件
 const loadNews = async () => {
     // 使用 Vite 的 import.meta.glob 批量加载内容
-    const modules = import.meta.glob("/src/assets/news/*/content.json");
+    const modules = import.meta.glob("../assets/news/*/content.json");
 
+    
     for (const path in modules) {
+        var imagePath = new URL("../assets/news/*/content.json", import.meta.url).href;
         const module: any = await modules[path](); // 动态导入 JSON 内容
-        const basePath = import.meta.env.BASE_URL || "/";
-        const imagePath = path
+        // const basePath = import.meta.env.BASE_URL || "/";
+        imagePath = path
             .replace("content.json", "image.png")
-            .replace("/src", basePath + "src");
 
         newsList.value.push({
             ...module,
