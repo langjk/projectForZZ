@@ -6,7 +6,7 @@
                 <!-- <div class="content">新闻内容</div> -->
                 <div class="News">
                     <HomeNews
-                        v-for="news in newsList"
+                        v-for="news in newsList.slice(0, 3)"
                         :title="news.title"
                         :content="news.content"
                         :image="news.image"
@@ -40,23 +40,42 @@
 </template>
 <script setup lang="ts">
 import HomeNews from "@/components/HomeNews.vue";
-import noticeData from "../assets/notice.json";
 import HomeSideBar from "@/components/HomeSideBar.vue";
 import { ref, onMounted } from "vue";
 // 定义新闻列表
 const newsList = ref<
     { title: string; type: string; content: string; image: string; url: string }[]
 >([]);
-// 加载所有新闻的 JSON 文件cx`
+
+const noticeData = ref<
+    {
+        date: string;
+        timestamp: number;
+        day: string;
+        title: string;
+        description: string;
+        location: string;
+    }[]
+>([]);
+const basePath = import.meta.env.BASE_URL || "/";
+
+const loadNotice = async () => {
+    const noticePath = `${basePath}notice.json`;
+    try {
+        // 加载 JSON 文件
+        const response = await fetch(noticePath);
+        noticeData.value = await response.json();
+    } catch (error) {
+        console.error(`Failed to load content from ${noticePath}:`, error);
+    }
+};
 // 加载所有新闻的 JSON 文件
 const loadNews = async () => {
-    const basePath = import.meta.env.BASE_URL || "/";
-    const listPath = import.meta.env.BASE_URL + "/News/List.json"
+    const listPath = import.meta.env.BASE_URL + "/News/List.json";
     // const newsFolders = [];
 
-    
     const listResponse = await fetch(listPath);
-    const newsFolders = await listResponse.json()
+    const newsFolders = await listResponse.json();
 
     for (const folder of newsFolders) {
         const contentPath = `${basePath}News/${folder}/content.json`;
@@ -81,6 +100,7 @@ const loadNews = async () => {
 // 在组件挂载时加载新闻
 onMounted(() => {
     loadNews();
+    loadNotice();
 });
 </script>
 <style scoped>

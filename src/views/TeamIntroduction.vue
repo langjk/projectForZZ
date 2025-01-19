@@ -3,7 +3,7 @@
         <div v-for="item in rawData" class="mainCard">
             <el-row style="width: 100%; align-items: center">
                 <el-col :span="6">
-                    <img :src="`${imagePath}/${item.name}.jpg`" alt="Member Image" />
+                    <img :src="item.image" alt="Member Image" />
                 </el-col>
                 <el-col :span="18">
                     <el-row class="card-header">
@@ -40,9 +40,41 @@
     </div>
 </template>
 <script setup lang="ts">
-import rawData from "../assets/member.json";
-const imagePath = new URL("../assets/MemberPic/", import.meta.url).href;
-console.log(imagePath);
+import { ref, onMounted } from "vue";
+const rawData = ref<
+    {
+        name: string;
+        title: string;
+        english_title: string;
+        email: string;
+        phone: string;
+        research: string;
+        image: string;
+    }[]
+>([]);
+
+const basePath = import.meta.env.BASE_URL || "/";
+
+const loadMember = async () => {
+    const memberPath = import.meta.env.BASE_URL + "/member.json";
+    // const newsFolders = [];
+
+    const memberResponse = await fetch(memberPath);
+    const members = await memberResponse.json();
+
+    for (const member of members) {
+        const imagePath = `${basePath}MemberPic/${member.name}.jpg`;
+        // 将 JSON 数据和图片路径加入列表
+        rawData.value.push({
+            ...member,
+            image: imagePath,
+        });
+    }
+};
+
+onMounted(() => {
+    loadMember();
+});
 </script>
 <style scoped>
 .container {

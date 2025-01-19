@@ -34,13 +34,40 @@
                     </el-row>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="通知公告">通知公告</el-tab-pane>
+            <el-tab-pane label="通知公告">
+                <el-row v-for="news in noticeData" :key="news.title" class="news-item">
+                    <h2>{{ news.title }}</h2>
+                </el-row>
+            </el-tab-pane>
         </el-tabs>
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+
+const noticeData = ref<
+    {
+        date: string;
+        timestamp: number;
+        day: string;
+        title: string;
+        description: string;
+        location: string;
+    }[]
+>([]);
+const basePath = import.meta.env.BASE_URL || "/";
+
+const loadNotice = async () => {
+    const noticePath = `${basePath}notice.json`;
+    try {
+        // 加载 JSON 文件
+        const response = await fetch(noticePath);
+        noticeData.value = await response.json();
+    } catch (error) {
+        console.error(`Failed to load content from ${noticePath}:`, error);
+    }
+};
 
 // 定义新闻列表
 const newsList = ref<
@@ -49,13 +76,11 @@ const newsList = ref<
 
 // 加载所有新闻的 JSON 文件
 const loadNews = async () => {
-    const basePath = import.meta.env.BASE_URL || "/";
-    const listPath = import.meta.env.BASE_URL + "/News/List.json"
+    const listPath = import.meta.env.BASE_URL + "/News/List.json";
     // const newsFolders = [];
 
-    
     const listResponse = await fetch(listPath);
-    const newsFolders = await listResponse.json()
+    const newsFolders = await listResponse.json();
 
     for (const folder of newsFolders) {
         const contentPath = `${basePath}News/${folder}/content.json`;
@@ -80,6 +105,7 @@ const loadNews = async () => {
 // 在组件挂载时加载新闻
 onMounted(() => {
     loadNews();
+    loadNotice();
 });
 
 const jump = (url: string) => {
