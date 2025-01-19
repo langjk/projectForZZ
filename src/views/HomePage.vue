@@ -48,35 +48,32 @@ const newsList = ref<
     { title: string; type: string; content: string; image: string; url: string }[]
 >([]);
 // 加载所有新闻的 JSON 文件cx`
+// 加载所有新闻的 JSON 文件
 const loadNews = async () => {
-    // 动态加载 JSON 文件
-    const jsonModules = import.meta.glob("/src/assets/News/**/content.json", {
-        eager: true,
-    });
-    const imageModules = import.meta.glob("/src/assets/News/**/image.png", {
-        eager: true,
-    });
+    const basePath = import.meta.env.BASE_URL || "/";
+    const listPath = import.meta.env.BASE_URL + "/News/List.json"
+    // const newsFolders = [];
 
-    for (const path in jsonModules) {
+    
+    const listResponse = await fetch(listPath);
+    const newsFolders = await listResponse.json()
+
+    for (const folder of newsFolders) {
+        const contentPath = `${basePath}News/${folder}/content.json`;
+        const imagePath = `${basePath}News/${folder}/image.png`;
+
         try {
-            // 获取 JSON 数据
-            const module = jsonModules[path] as { default: any };
+            // 加载 JSON 文件
+            const response = await fetch(contentPath);
+            const module = await response.json();
 
-            // 获取图片路径
-            const folderPath = path.replace("/content.json", "/image.png");
-            const imagePath = (imageModules[folderPath] as { default: string }).default;
-
-            if (!imagePath) {
-                console.warn(`No image found for path: ${folderPath}`);
-                continue;
-            }
-            // 将数据和图片添加到新闻列表
+            // 将 JSON 数据和图片路径加入列表
             newsList.value.push({
-                ...module.default, // JSON 内容
-                image: imagePath, // 图片路径
+                ...module,
+                image: imagePath,
             });
         } catch (error) {
-            console.error(`Failed to process file at ${path}:`, error);
+            console.error(`Failed to load content from ${contentPath}:`, error);
         }
     }
 };

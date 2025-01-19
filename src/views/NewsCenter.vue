@@ -50,7 +50,12 @@ const newsList = ref<
 // 加载所有新闻的 JSON 文件
 const loadNews = async () => {
     const basePath = import.meta.env.BASE_URL || "/";
-    const newsFolders = ["News1", "News2", "News3"]; // 根据实际目录列出文件夹名称
+    const listPath = import.meta.env.BASE_URL + "/News/List.json"
+    // const newsFolders = [];
+
+    
+    const listResponse = await fetch(listPath);
+    const newsFolders = await listResponse.json()
 
     for (const folder of newsFolders) {
         const contentPath = `${basePath}News/${folder}/content.json`;
@@ -70,8 +75,6 @@ const loadNews = async () => {
             console.error(`Failed to load content from ${contentPath}:`, error);
         }
     }
-
-    console.log(newsList.value); // 打印结果，确保加载成功
 };
 
 // 在组件挂载时加载新闻
