@@ -1,0 +1,515 @@
+{
+    "books": [
+        {
+            "id": "B1",
+            "authors": "BZ. Zhang and H. Pang",
+            "title": "Wireless Power Transfer: Principle and Applications",
+            "publisher": "Wiley-IEEE Press",
+            "year": 2022,
+            "isbn": "9781119654117",
+            "link": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119654117",
+            "remark": "受邀专著"
+        },
+        {
+            "id": "B2",
+            "authors": "Z. Zhang, Y. Gu and Q. Li",
+            "title": "Wireless Power Transfer for Unmanned Aircrafts: Fundamental, Design and Control",
+            "publisher": "Cambridge University Press",
+            "year": 2024
+        }
+    ],
+    "papers": [
+        {
+            "id": "1",
+            "authors": "Z. Zhu, X. Wei, R. Han, C. Liu and Z. Zhang*",
+            "title": "Double-Vector Model-Free Predictive Current Control for PMSMs with Influence Rejection of DC Voltage Mismatch",
+            "journal": "IEEE Transactions on Transportation Electrification",
+            "year": "Early Access"
+        },
+        {
+            "id": "2",
+            "authors": "Z. Zhu, X. Wei, F. Yu and Z. Zhang*",
+            "title": "Overmodulatable Parameter-Free Predictive Current Control for PMSMs",
+            "journal": "IEEE Transactions on Power Electronics",
+            "year": "Early Access"
+        },
+        {
+            "id": "3",
+            "authors": "Z. Zhang, J. Zhang(2022硕), Y. Wu, Z. Zhu and S. Chang*",
+            "title": "A Weighted-Free CCS Model Predictive Current Control With Implicit Modulation for DTP-PMSMs",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "year": "Early Access"
+        },
+        {
+            "id": "4",
+            "authors": "Y. Gu(2020博), J. Wang, Z. Liang and Z. Zhang*",
+            "title": "Flexible Constant-Power Range Extension of Self-Oscillating System for Wireless In-Flight Charging of Drones",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "39",
+            "issue": "11",
+            "pages": "15342-15355",
+            "date": "Nov. 2024"
+        },
+        {
+            "id": "5",
+            "authors": "Y. Gong(2021博), Z. Zhang and S. Chang*",
+            "title": "Selected-interharmonic-injected pulse density modulation for one-to-many WPT systems",
+            "journal": "IEEE Transactions on Power Electronics",
+            "year": "2024",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "6",
+            "authors": "Y. Gu(2020博), J. Wang, Z. Liang, and Z. Zhang*",
+            "title": "Communication-free power control algorithm for drone wireless in-flight charging under dual-disturbance of mutual inductance and load",
+            "journal": "IEEE Transactions on Industrial Informatics",
+            "volume": "20",
+            "issue": "3",
+            "pages": "3703-3714",
+            "year": "2024",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "7",
+            "authors": "Y. Gong(2021博), Z. Zhang and S. Chang*",
+            "title": "Single-transmitter-controlled multiple-channel constant current outputs for in-flight wireless charging of drones",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "volume": "71",
+            "issue": "4",
+            "pages": "3606-3616",
+            "year": "2024",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "8",
+            "authors": "K. Chen(2021硕) and Z. Zhang*",
+            "title": "In-Flight Wireless Charging: A Promising Application-Oriented Charging Technique for Drones",
+            "journal": "IEEE Industrial Electronics Magazine",
+            "volume": "18",
+            "issue": "1",
+            "pages": "6-16",
+            "date": "March 2024"
+        },
+        {
+            "id": "9",
+            "authors": "Y. Gu (2020博), J. Wang, Z. Liang, and Z. Zhang*",
+            "title": "A wireless in-flight charging range extended PT-WPT system using S/single-inductor-double-capacitor compensation network for drones",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "38",
+            "issue": "10",
+            "pages": "123-135",
+            "year": "2023",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "10",
+            "authors": "K. Chen (2021硕) and Z. Zhang*",
+            "title": "Rotating-coordinate-based mutual inductance estimation for drone in-flight wireless charging systems",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "38",
+            "issue": "9",
+            "pages": "11685-11693",
+            "year": "2023",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "11",
+            "authors": "Y. Wu (2020博), Z. Zhang, Q. Yang, W. Tian*, P. Karamanakos, M. Heldwein and R. Kennel",
+            "title": "A Direct Model Predictive Control Strategy With an Implicit Modulator for Six-Phase PMSMs",
+            "journal": "IEEE Journal of Emerging and Selected Topics in Power Electronics",
+            "volume": "11",
+            "issue": "2",
+            "pages": "1291-1304",
+            "date": "April 2023"
+        },
+        {
+            "id": "12",
+            "authors": "Z. Zhang* and W. Yu (2020硕)",
+            "title": "Communication/model-free constant current control for wireless power transfer under disturbances of coupling effect",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "volume": "69",
+            "issue": "5",
+            "pages": "4587-4595",
+            "year": "2022",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "13",
+            "authors": "Y. Gong (2021博), Z. Zhang*, K. Wang*, Y. Gu and Y. Wu",
+            "title": "IoT-Oriented Single-Transmitter Multiple-Receiver Wireless Charging Systems Using Hybrid Multi-Frequency Pulse Modulation",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "60",
+            "issue": "10",
+            "pages": "1-6",
+            "date": "Oct. 2024"
+        },
+        {
+            "id": "14",
+            "authors": "J. Chen (2022硕), Z. Zhang, Z. Niu, S. Zeng, R. Han, Y. Wu and S. Chang*",
+            "title": "Computation-Efficient Model Predictive Control Using Sphere Decoding Algorithm for DTP-PMSMs",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "60",
+            "issue": "10",
+            "pages": "1-5",
+            "date": "Oct. 2024"
+        },
+        {
+            "id": "15",
+            "authors": "Z. Zhu (2022博), X. Wei, Z. Zhang, R. Han, Y. Wu, Y. Gong and S. Chang*",
+            "title": "Torque-Ripple-Mitigated Model-Free Predictive Current Control With Extended Control Set for PMSMs",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "60",
+            "issue": "9",
+            "pages": "1-6",
+            "date": "Sept. 2024"
+        },
+        {
+            "id": "16",
+            "authors": "Z. Zhang, J. Zhang (2022硕), R. Han, Y. Wu*, Y. Gong and S. Chang",
+            "title": "Computation-Efficient Current Harmonic Mitigation for Dual Three-Phase Permanent Magnet Synchronous Motors",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "60",
+            "issue": "9",
+            "pages": "1-5",
+            "date": "Sept. 2024"
+        },
+        {
+            "id": "17",
+            "authors": "Y. Wu (2020博), Z. Zhang, R. Han, Y. Gong and S. Chang*",
+            "title": "DC-Link Utilization Enhanced Implicit Model Predictive Control for Dual Three-Phase PMSMs",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "60",
+            "issue": "9",
+            "pages": "1-6",
+            "date": "Sept. 2024"
+        },
+        {
+            "id": "18",
+            "authors": "Z. Zhang, J. Chen (2022硕), R. Han, Y. Wu, Y. Gong and S. Chang*",
+            "title": "K-Best-Sphere-Decoding-Based Model Predictive Control for Dual Three-Phase SPMSMs",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "60",
+            "issue": "9",
+            "pages": "1-6",
+            "date": "Sept. 2024"
+        },
+        {
+            "id": "19",
+            "authors": "Z. Zhu (2022博), X. Wei, Y. Wu, J. Rodriguez and Z. Zhang*",
+            "title": "Parameter-Free Deadbeat Predictive Current Control for PMSMs Using Improved Closed Loop Observer",
+            "conference": "2024 IEEE 10th International Power Electronics and Motion Control Conference (IPEMC2024-ECCE Asia)",
+            "location": "Chengdu, China",
+            "year": "2024",
+            "pages": "1476-1480"
+        },
+        {
+            "id": "20",
+            "authors": "Y. Gu (2020博), Q. Zhu, L. Jia, G. Li and Z. Zhang*",
+            "title": "Optimized High-Order Compensation Topology for PT-WPT Systems With Expanded Constant Power Region",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "59",
+            "issue": "11",
+            "pages": "1-6",
+            "date": "Nov. 2023"
+        },
+        {
+            "id": "21",
+            "authors": "Y. Gu (2020博), J. Chen, S. Chang and Z. Zhang*",
+            "title": "Constant Power Control Against M/R With Expanded PT-Symmetric Range for Wireless In-Flight Charging of Drones",
+            "journal": "IEEE Transactions on Magnetics",
+            "volume": "59",
+            "issue": "11",
+            "pages": "1-6",
+            "date": "Nov. 2023"
+        },
+        {
+            "id": "22",
+            "authors": "Q. Zhu, Z. Zhang*, Z. Zhu",
+            "title": "Two-Stage Multiple-Vector Model Predictive Control for Multiple-Phase Electric-Drive-Reconstructed Power Management for Solar-Powered Vehicles",
+            "journal": "World Electric Vehicle Journal",
+            "volume": "15",
+            "pages": "466",
+            "year": "2024"
+        },
+        {
+            "id": "23",
+            "authors": "Z. Zhang*, H. Pang (2017硕), A. Georgiadis, and C. Cecati",
+            "title": "Wireless power transfer – an overview",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "volume": "66",
+            "issue": "2",
+            "pages": "1044-1058",
+            "year": "2019",
+            "remark": "SCI/1区",
+            "awards": "IEEE-TIE Best Paper Award 2020 | 受邀论文 | IEEE-TIE Most Popular Article TOP3"
+        },
+        {
+            "id": "24",
+            "authors": "K. Chen (2021硕) and Z. Zhang*",
+            "title": "In-flight wireless charging: a promising application-oriented charging technique for drones",
+            "journal": "IEEE Industrial Electronics Magazine",
+            "volume": "18",
+            "issue": "1",
+            "pages": "6-16",
+            "year": "2024",
+            "remark": "SCI/1区",
+            "awards": "IEEE-IEM Featured Article | IEEE-IEM Most Popular Article TOP3"
+        },
+        {
+            "id": "25",
+            "authors": "Y. Gu (2020博), J. Wang, Z. Liang, and Z. Zhang*",
+            "title": "Mutual-inductance-dynamic-predicted constant current control of LCC-P compensation network for drone wireless in-flight charging",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "volume": "69",
+            "issue": "12",
+            "pages": "12710-12719",
+            "year": "2022",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "26",
+            "authors": "Y. Gu (2020博), J. Wang, Z. Liang, Y. Wu, C. Cecati, and Z. Zhang*",
+            "title": "Single-transmitter multiple-pickup wireless power transfer",
+            "journal": "IEEE Industrial Electronics Magazine",
+            "volume": "14",
+            "issue": "4",
+            "pages": "123-135",
+            "year": "2020",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "27",
+            "authors": "Y. Wu (2020博), Z. Zhang, Q. Yang, W. Tian*, P. Karamanakos, M. Heldwein, and R. Kennel",
+            "title": "A direct model predictive control strategy with an implicit modulator for six-phase PMSMs",
+            "journal": "IEEE Journal of Emerging and Selected Topics in Power Electronics",
+            "volume": "11",
+            "issue": "2",
+            "pages": "1291-1304",
+            "year": "2023",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "28",
+            "authors": "Z. Zhang*, Z. Wang (2019硕), X. Wei, Z. Liang, R. Kennel, and J. Rodriguez",
+            "title": "Space-vector-optimized predictive control for dual three-phase PMSM with quick current response",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "37",
+            "issue": "4",
+            "pages": "4453-4462",
+            "year": "2022",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "29",
+            "authors": "Z. Zhang*, S. Shen (2019硕), Z. Liang, S. H. K. Eder, and R. Kennel",
+            "title": "Dynamic-balancing robust current control for wireless drone-in-flight charging",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "37",
+            "issue": "3",
+            "pages": "3626-3635",
+            "year": "2022",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "30",
+            "authors": "Z. Zhang*, X. Li (2018硕), H. Pang, H. Komurcugil, Z. Liang and R. Kennel",
+            "title": "Multiple-frequency resonating compensation for multichannel transmission of wireless power transfer",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "36",
+            "issue": "5",
+            "pages": "5169-5180",
+            "year": "2021",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "31",
+            "authors": "Z. Zhang*, H. Pang (2017硕), S. H. K. Eder and R. Kennel",
+            "title": "Self-balancing virtual impedance for multiple-pickup wireless power transfer",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "36",
+            "issue": "1",
+            "pages": "958-967",
+            "year": "2021",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "32",
+            "authors": "Z. Zhang* and H. Pang (2017硕)",
+            "title": "Continuously adjustable capacitor for multiple-pickup wireless power transfer under single-power-induced energy field",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "volume": "67",
+            "issue": "8",
+            "pages": "6418-6427",
+            "year": "2020",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "33",
+            "authors": "Z. Zhang* and B. Zhang (2017硕)",
+            "title": "Angular-misalignment insensitive omnidirectional wireless power transfer",
+            "journal": "IEEE Transactions on Industrial Electronics",
+            "volume": "67",
+            "issue": "4",
+            "pages": "2755-2764",
+            "year": "2020",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "34",
+            "authors": "Z. Zhang*, C. Xie (2018硕), R. Tong and S. Gao",
+            "title": "Identification and control of electric elasticity limit for electric-spring-based flexible loads",
+            "journal": "IEEE Transactions on Industrial Informatics",
+            "volume": "15",
+            "issue": "11",
+            "pages": "6001-6010",
+            "year": "2019",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "35",
+            "authors": "Z. Zhang*, K.T. Chau, C. Qiu, and C. Liu",
+            "title": "Energy encryption for wireless power transfer",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "30",
+            "issue": "9",
+            "pages": "5237-5246",
+            "year": "2015",
+            "remark": "SCI/1区"
+        },
+        {
+            "id": "36",
+            "authors": "Z. Zhang* and K. T. Chau",
+            "title": "Homogeneous wireless power transfer for move-and-charge",
+            "journal": "IEEE Transactions on Power Electronics",
+            "volume": "30",
+            "issue": "11",
+            "pages": "6213-6220",
+            "year": "2015",
+            "remark": "SCI/1区"
+        }
+    ],
+    "patents": [
+        {
+            "id": "P1",
+            "inventors": "张镇,朱志豪,韩瑞雪,等",
+            "title": "一种基于电压矢量扩展的永磁同步电机模型预测控制方法",
+            "number": "CN202411180232.X",
+            "date": "2024-09-24",
+            "status": "授权"
+        },
+        {
+            "id": "P2",
+            "inventors": "张镇,谷宇,常思远,等",
+            "title": "无线充电系统、无人机及其悬停状态无线充电系统及方法",
+            "number": "CN202211588418.X",
+            "date": "2024-06-04",
+            "status": "授权"
+        },
+        {
+            "id": "P3",
+            "inventors": "张镇,朱志豪,邓斌,等",
+            "title": "一种具有过调制能力的同步电机预测电流控制方法及系统",
+            "type": "发明专利",
+            "number": "CN202311481633.4",
+            "date": "2024-02-02",
+            "status": "授权"
+        },
+        {
+            "id": "P4",
+            "inventors": "张镇,朱志豪,邓斌,等",
+            "title": "永磁同步电机的三矢量无模型预测电流控制方法及系统",
+            "type": "发明专利",
+            "number": "CN202311484545.X",
+            "date": "2024-02-02",
+            "status": "授权"
+        },
+        {
+            "id": "P5",
+            "inventors": "张镇, 王辰龙, 谷宇, 等",
+            "title": "一种大功率多通道无线电能传输系统及方法",
+            "type": "发明专利",
+            "number": "CN202411510912.3",
+            "date": "2024-10-28"
+        },
+        {
+            "id": "P6",
+            "inventors": "张镇,王紫骅,韩瑞雪,等",
+            "title": "一种六相永磁同步电机多步长预测控制球形解码优化方法",
+            "type": "发明专利",
+            "number": "CN202411172220.2",
+            "date": "2024-09-24"
+        },
+        {
+            "id": "P7",
+            "inventors": "张镇,陈建,常思远,等",
+            "title": "无人机攻防博弈的拦截意图识别策略仿真系统及方法",
+            "type": "发明专利",
+            "number": "CN202310143437.X",
+            "date": "2023-07-14"
+        },
+        {
+            "id": "P8",
+            "inventors": "张镇, 陈建,常思远,等",
+            "title": "基于数字孪生的无人机电源系统荷电状态评估系统及方法",
+            "type": "发明专利",
+            "number": "CN202310121793.1",
+            "date": "2023-05-23"
+        },
+        {
+            "id": "P9",
+            "inventors": "张镇,吴一桐,常思远,等",
+            "title": "小数据驱动观测器、多相电机预测控制系统及方法",
+            "type": "发明专利",
+            "number": "CN202211648545.4",
+            "date": "2023-05-16"
+        },
+        {
+            "id": "P10",
+            "inventors": "张镇, 陈恺铂,常思远,等",
+            "title": "一种无人机悬停无线充电系统互感估计方法",
+            "type": "发明专利",
+            "number": "CN202211588416.0",
+            "date": "2023-05-02"
+        },
+        {
+            "id": "P11",
+            "inventors": "张镇,宋奇耀,常思远,等",
+            "title": "一种基于边缘计算终端的智能楼宇空调节能系统及方法",
+            "type": "发明专利",
+            "number": "CN202211648901.2",
+            "date": "2023-04-14"
+        },
+        {
+            "id": "P12",
+            "inventors": "张镇,张衎,常思远,等",
+            "title": "基于嵌入式平台的主从架构多核并行目标识别系统及方法",
+            "type": "发明专利",
+            "number": "CN202211648891.2",
+            "date": "2023-03-21"
+        },
+        {
+            "id": "P13",
+            "inventors": "张镇,张佳辉,常思远,等",
+            "title": "基于云边协同技术的无人机集群的目标识别系统及方法",
+            "type": "发明专利",
+            "number": "CN202211648567.0",
+            "date": "2023-03-21"
+        },
+        {
+            "id": "P14",
+            "inventors": "张镇,朱志豪,常思远,等",
+            "title": "六相永磁同步电机无参数模型预测电流控制系统及方法",
+            "type": "发明专利",
+            "number": "CN202211648578.9",
+            "date": "2023-03-21"
+        },
+        {
+            "id": "P15",
+            "inventors": "张镇,龚延天,常思远,等",
+            "title": "多通道恒流输出的无人机悬停充电系统及方法",
+            "type": "发明专利",
+            "number": "CN202211588385.9",
+            "date": "2023-03-14"
+        }
+    ]
+}
