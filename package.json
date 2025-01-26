@@ -9,14 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kangc/v-md-editor": "^2.3.18",
     "element-plus": "^2.8.7",
     "path": "^0.12.7",
     "pdf-view-reader": "^1.0.1",
+    "prismjs": "^1.29.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@types/prismjs": "^1.26.5",
     "@vitejs/plugin-vue": "^5.1.4",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",
