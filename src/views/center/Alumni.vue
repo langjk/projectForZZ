@@ -3,9 +3,10 @@
         <div v-for="item in rawData" class="mainCard">
             <el-row style="width: 100%; align-items: center">
                 <el-col :span="6">
-                    <img :src="item.image" alt="Member Image" />
+                    <img :src="item.image" alt="Member Image" @error="handleImageError" />
                 </el-col>
-                <el-col :span="18">
+                <el-col :span="2" />
+                <el-col :span="16">
                     <el-row class="card-header">
                         <el-col :span="14">
                             <el-row>
@@ -74,6 +75,11 @@ const loadMember = async () => {
     }
 };
 
+const handleImageError = (event: Event) => {
+    (event.target as HTMLImageElement).src =
+        'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 200 200"><rect width="100%" height="100%" fill="gray"/></svg>';
+};
+
 onMounted(() => {
     loadMember();
 });
@@ -81,8 +87,9 @@ onMounted(() => {
 <style scoped>
 .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -106,21 +113,21 @@ onMounted(() => {
 
 .mainCard {
     font-size: max(1.3vw, 12px);
-    width: 75%;
+    width: 38%;
     min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid rgb(0, 0, 0, 0.1);
     margin: 20px 0;
-    padding: 30px 5%;
+    padding: 30px 2%;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
     transition: all 0.5s;
 }
-.mainCard:hover {
+/*.mainCard:hover {
     scale: 1.1;
     margin: 50px 0;
-}
+}*/
 
 img {
     height: 12vw;
@@ -129,6 +136,7 @@ img {
     min-height: 80px;
     object-fit: cover;
     border-radius: 5%;
+    margin-right:1vw;
 }
 
 .card-header {
