@@ -1,36 +1,37 @@
 [
     {
-        "date": "11月22日",
+        "date": "10月09日",
         "timestamp": 1732214400,
-        "day": "静态23",
-        "title": "水利工程智能建设与运维全国重点实验室2025年度开放研究基金会...",
-        "description": "“水利工程智能建设与运维全国重点实验室”是在原有“水利工程...”基础上...",
+        "day": "周三",
+        "title": "天津大学-长园共创新型电力系统协同控制研究中心正式成立 ...",
+        "description": "“2024年10月9日，长园共创电力安全技术股份有限公司（以下简称 “长园共创”）与天津大学电气自动化与信息工程学院...”基础上...",
         "location": ""
     },
     {
-        "date": "7月01日",
-        "timestamp": 1719811200,
-        "day": "周一",
-        "title": "征文启事：第六届天津大学博士生学术论坛经济学分论坛",
-        "description": "第六届天津大学博士生学术论坛经济学分论坛将定于2024年10月举行，现公开...",
-        "location": ""
-    },
-    {
-        "date": "6月21日",
-        "timestamp": 1718995200,
-        "day": "周五",
-        "title": "化学工程联合国家重点实验室（天津大学）2024年度开放课题申...",
-        "description": "根据《化学工程联合国家重点实验室（天津大学）开放课题管理办法》，2024...",
-        "location": ""
-    },
-    {
-        "date": "6月15日",
+        "date": "9月09日",
         "timestamp": 1718553600,
-        "day": "周六",
-        "title": "2024第四届“一带一路”《中国人文与人才中国》国际论坛",
-        "description": "世界由您了解中国：中国因您影响世界。2024第四届“一带一路”《中国人文...",
+        "day": "周一",
+        "title": "祝贺！朱志豪博士的论文被TPE(IEEE Transactions on Power Electronics)正式录用",
+        "description": "论文“Overmodulatable Parameter-Free Predictive Current Control for PMSMs...”",
         "location": ""
     },
+    {
+        "date": "8月19日",
+        "timestamp": 1718995200,
+        "day": "周二",
+        "title": "祝贺！张佳辉同学的论文被TIE(IEEE Transactions on Industrial Electronics)正式录用",
+        "description": "论文“A Weighted-Free CCS Model Predictive Current Control With Implicit Modulation for DTP-PMSMs”..",
+        "location": ""
+    },
+    {
+        "date": "6月27日",
+        "timestamp": 1719811200,
+        "day": "周四",
+        "title": "远风天大自动化智能动力系统联合研究中心成立一周年会议成功举办 ",
+        "description": "天津大学电气自动化与信息工程学院与天津远海金风新能源有限公司共建的“远风天大自动化智能动力系统联合研究中心”...",
+        "location": ""
+    },
+
     {
         "date": "6月11日",
         "timestamp": 1718208000,
