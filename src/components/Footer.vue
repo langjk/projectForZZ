@@ -21,10 +21,9 @@
         <div class="EndContent">
             联系我们
             <div class="links">
-                <span>地址:天津市南开区卫津路92号 天津大学 电气自动化与信息工程学院</span>
+                <span>地址:天津市南开区天开高教科创园5号楼1608、天津市南开区卫津路92号 天津大学26教学楼E区441</span>
                 <span>邮编: 300072</span>
-                <span>电话:(022)27406272</span>
-                <span>E-mail: auto@tju.edu.cn</span>
+                <span>E-mail: zhangz@tju.edu.cn</span>
             </div>
         </div>
     </div>
