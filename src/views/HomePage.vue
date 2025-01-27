@@ -11,6 +11,7 @@
                         :content="news.content"
                         :image="news.image"
                         :url="news.url"
+                        :urltype="news.urltype"
                     />
                 </div>
             </el-col>
@@ -44,7 +45,7 @@ import HomeSideBar from "@/components/HomeSideBar.vue";
 import { ref, onMounted } from "vue";
 // 定义新闻列表
 const newsList = ref<
-    { title: string; type: string; content: string; image: string; url: string }[]
+    { title: string; type: string; content: string; image: string; url: string ;urltype: string;}[]
 >([]);
 
 const noticeData = ref<

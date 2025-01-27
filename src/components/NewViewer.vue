@@ -1,13 +1,10 @@
 <template>
-  <v-md-editor v-model="text" height="400px"></v-md-editor>
+  <v-md-editor v-model="text"  mode="preview"></v-md-editor>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      text: '',
-    };
-  },
-};
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const props = defineProps<{ text: string }>();
+const text = computed(() => props.text);
 </script>
