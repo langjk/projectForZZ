@@ -14,6 +14,7 @@ import Alumni from '../views/center/Alumni.vue';
 
 import NewsCenter from '../views/NewsCenter.vue';
 import Notices from '../views/Notices.vue';
+import NewsPage from '@/views/NewsPage.vue'
 
 import EmbeddedComputing from '../views/research/EmbeddedComputing.vue';
 import PowerDriveControl from '../views/research/PowerDriveControl.vue';
@@ -24,7 +25,7 @@ import LatestResults from '@/views/academic/LatestResults.vue'
 import Monographs from '@/views/academic/Monographs.vue'
 import PapersPatents from '@/views/academic/PapersPatents.vue'
 
-import NewViewer from '@/components/NewViewer.vue'
+// import NewViewer from '@/components/NewViewer.vue'
 const routes = [
     { path: '/', component: HomePage },
 
@@ -44,7 +45,7 @@ const routes = [
         children: [
             { path: 'center', name: 'NewsCenter', component: NewsCenter },
             { path: 'notices', name: 'Notices', component: Notices },
-            { path: 'newsviewer', name: 'NewsViewer', component: NewViewer }
+            { path: 'newspage/:newsType', name: 'newspage', component: NewsPage }
         ]
     },
     {

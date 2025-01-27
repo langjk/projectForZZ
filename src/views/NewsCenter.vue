@@ -16,7 +16,7 @@
                         v-for="news in newsList"
                         :key="news.title"
                         class="news-item"
-                        @click="jump(news.url)"
+                        @click="jump(news.urltype,news.url)"
                     >
                         <el-col
                             :md="8"
@@ -45,7 +45,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-
+import router from "@/router";
 const noticeData = ref<
     {
         date: string;
@@ -71,7 +71,14 @@ const loadNotice = async () => {
 
 // 定义新闻列表
 const newsList = ref<
-    { title: string; type: string; content: string; image: string; url: string }[]
+    {
+        title: string;
+        type: string;
+        content: string;
+        image: string;
+        url: string;
+        urltype: string;
+    }[]
 >([]);
 
 // 加载所有新闻的 JSON 文件
@@ -108,8 +115,11 @@ onMounted(() => {
     loadNotice();
 });
 
-const jump = (url: string) => {
-    window.open(url, "_blank");
+const jump = (urltype: string, url: string) => {
+    if (urltype == "md") {
+        const routeUrl = router.resolve({ path: `/news/newspage/${url}` });
+        window.open(routeUrl.href, "_blank");
+    } else window.open(url, "_blank");
 };
 </script>
 
@@ -171,9 +181,10 @@ const jump = (url: string) => {
     box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.2); /* 加强阴影效果 */
 }
 .news-image {
-    width: 80%;
-    height: auto;
+    width: 16vw;
+    height: 9vw;
     border-radius: 5px;
+    object-fit: contain;
 }
 
 .news-type {

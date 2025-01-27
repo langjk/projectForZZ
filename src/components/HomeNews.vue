@@ -1,22 +1,27 @@
 <template>
-    <div class="NewsContainer" @click="jump(url)">
+    <div class="NewsContainer" @click="jump(urltype, url)">
         <img :src="image" alt="新闻图片" class="news-image" />
         <div class="NewsTitle">{{ title }}</div>
         <div class="NewsContent">{{ content }}</div>
     </div>
 </template>
 <script setup lang="ts">
+import router from "@/router";
 interface Props {
     title: string;
     content: string;
     image: string;
     url: string;
+    urltype: string;
 }
 
 const props = defineProps<Props>();
 props;
-const jump = (url: string) => {
-    window.open(url, "_blank");
+const jump = (urltype: string, url: string) => {
+    if (urltype == "md") {
+        const routeUrl = router.resolve({ path: `/news/newspage/${url}` });
+        window.open(routeUrl.href, "_blank");
+    } else window.open(url, "_blank");
 };
 </script>
 <style scoped>
@@ -26,7 +31,7 @@ const jump = (url: string) => {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    padding:2%;
+    padding: 2%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0.3vw 0.4vw rgba(0, 0, 0, 0.1);
 }
@@ -35,8 +40,8 @@ const jump = (url: string) => {
     box-shadow: 0 0.6vw 1vw rgba(0, 0, 0, 0.2); /* 加强阴影效果 */
 }
 .news-image {
-    height:9vw;
-    object-fit:cover;
+    height: 9vw;
+    object-fit: cover;
 }
 
 .block {

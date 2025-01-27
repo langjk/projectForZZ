@@ -7,6 +7,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
 
+    "typeRoots": ["./node_modules/@types", "./src"],
     /* Bundler mode */
     "moduleResolution": "Bundler", // 保持 Bundler 模式，用于 Vite
     "allowImportingTsExtensions": true,
@@ -34,5 +35,5 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/env.d.ts" // 确保全局类型声明文件被包含
-  ]
+, "src/views/NewsPage"  ]
 }

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "张镇",
+        "title": "教授/博士生导师",
+        "english_title": "",
+        "email": "zhangz@tju.edu.cn",
+        "phone": "",
+        "research": "嵌入式深度计算与控制，弱模型预测控制与优化,综合电力能源协同控制"
+    },
+    {
+        "name": "常思远",
+        "title": "助理研究员",
+        "english_title": "Dr. Siyuan Chang",
+        "email": "changsiyuan@tju.edu.cn",
+        "phone": "15122327985",
+        "research": "嵌入式深度计算，预测控制Embedded Deep Computing,Predictive Control"
+    },
+    {
+        "name": "谷宇",
+        "title": "助理研究员",
+        "english_title": "Dr. Yu Gu",
+        "email": "guyu1997@tju.edu.cn",
+        "phone": "15822283773",
+        "research": "分布式储能协同控制,Cooperative Control of Distributed Energy Storage,嵌入式并行计算,Embedded Parallel Computing,高频功率变换,High-Frequency Power Conversion"
+    }
+]
