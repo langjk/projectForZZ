@@ -1,0 +1,114 @@
+[
+    {
+        "enrollment_year": 2016,
+        "graduation_year": 2018,
+        "degree_type": "硕士研究生",
+        "name": "艾文杰",
+        "thesis_title": "基于能量加密的无线电能传输系统阻抗调节技术研究",
+        "destination": "卡斯柯信号(北京)有限公司"
+    },
+    {
+        "enrollment_year": 2016,
+        "graduation_year": 2018,
+        "degree_type": "硕士研究生",
+        "name": "仝瑞麟",
+        "thesis_title": "无源型虚拟电容的分析与控制",
+        "destination": "新加坡国立大学"
+    },
+    {
+        "enrollment_year": 2017,
+        "graduation_year": 2019,
+        "degree_type": "硕士研究生",
+        "name": "庞宏亮",
+        "thesis_title": "多负载无线电能传输系统虚拟阻抗调节机制的分析与控制",
+        "destination": "香港理工大学"
+    },
+    {
+        "enrollment_year": 2017,
+        "graduation_year": 2019,
+        "degree_type": "硕士研究生",
+        "name": "张博文",
+        "thesis_title": "三维空间内全向非接触式能量传输分析与优化",
+        "destination": "爱立信(中国)通信有限公司"
+    },
+    {
+        "enrollment_year": 2018,
+        "graduation_year": 2020,
+        "degree_type": "硕士研究生",
+        "name": "解聪",
+        "thesis_title": "基于虚拟矢量的双三相永磁同步电机模型预测电流控制",
+        "destination": "小米"
+    },
+    {
+        "enrollment_year": 2018,
+        "graduation_year": 2020,
+        "degree_type": "硕士研究生",
+        "name": "李星宇",
+        "thesis_title": "无线电能传输系统多频谐振补偿网络的分析与设计",
+        "destination": "小米"
+    },
+    {
+        "enrollment_year": 2018,
+        "graduation_year": 2020,
+        "degree_type": "硕士研究生",
+        "name": "杨琳",
+        "thesis_title": "无线电能传输系统恒流输出控制研究",
+        "destination": "华为"
+    },
+    {
+        "enrollment_year": 2019,
+        "graduation_year": 2021,
+        "degree_type": "硕士研究生",
+        "name": "申深",
+        "thesis_title": "无人机悬停无线充电无模型恒流输出控制",
+        "destination": "中国电科"
+    },
+    {
+        "enrollment_year": 2019,
+        "graduation_year": 2021,
+        "degree_type": "硕士研究生",
+        "name": "王志超",
+        "thesis_title": "小电感双三相永磁同步电机的模型预测电流控制研究",
+        "destination": "航天三院"
+    },
+    {
+        "enrollment_year": 2020,
+        "graduation_year": 2022,
+        "degree_type": "硕士研究生",
+        "name": "余文锋",
+        "thesis_title": "复杂空战场景下非线性微分对策关键问题研究",
+        "destination": "北京紫光同芯"
+    },
+    {
+        "enrollment_year": 2020,
+        "graduation_year": 2024,
+        "degree_type": "硕士研究生",
+        "name": "谷宇",
+        "thesis_title": "无人机悬停无线充电的恒功率区域自适应延拓研究",
+        "destination": "天津大学"
+    },
+    {
+        "enrollment_year": 2021,
+        "graduation_year": 2024,
+        "degree_type": "硕士研究生",
+        "name": "陈恺铂",
+        "thesis_title": "无人机悬停无线充电系统互感估计研究",
+        "destination": "天津沐阳科技"
+    },
+    {
+        "enrollment_year": 2021,
+        "graduation_year": 2024,
+        "degree_type": "硕士研究生",
+        "name": "宋奇耀",
+        "thesis_title": "基于小数据驱动观测器的双三相永磁同步电机模型预测控制",
+        "destination": "航天一院"
+    },
+    {
+        "enrollment_year": 2022,
+        "graduation_year": 2024,
+        "degree_type": "博士研究生",
+        "name": "陈建",
+        "thesis_title": "双三相永磁同步电机的多步长模型预测控制球形解码算法研究",
+        "destination": "天津大学"
+    }
+]
